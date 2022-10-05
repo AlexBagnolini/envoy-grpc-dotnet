@@ -24,6 +24,7 @@
   -->
   <ItemGroup>
     <ProtoRoot Include="proto\envoy-api" />
+    <ProtoRoot Include="proto\udpa" />
     <ProtoRoot Include="proto\googleapis" />
     <ProtoRoot Include="proto\opencensus\src" />
     <ProtoRoot Include="proto\protoc-gen-validate" />
@@ -56,8 +57,13 @@
     <Protobuf Include="proto\googleapis\**\*.proto" ProtoRoot="proto\googleapis" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
     <Protobuf Include="proto\opencensus\src\**\*.proto" ProtoRoot="proto\opencensus\src" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
     <Protobuf Include="proto\protoc-gen-validate\**\*.proto" ProtoRoot="proto\protoc-gen-validate" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
+    <Protobuf Include="proto\udpa\**\*.proto" ProtoRoot="proto\udpa" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
     <Protobuf Include="proto\xds\**\*.proto" ProtoRoot="proto\xds" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
     <Protobuf Include="proto\opentelemetry\**\*.proto" ProtoRoot="proto\opentelemetry" OutputDir="$(IntermediateOutputPath)\proto\$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(RelativeDir)))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Remove="proto\xds\udpa\annotations\migrate.proto" />
   </ItemGroup>
 
   <ItemGroup>

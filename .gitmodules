@@ -1,6 +1,3 @@
-[submodule "proto/udpa"]
-	path = proto/udpa
-	url = https://github.com/cncf/udpa.git
 [submodule "proto/envoy-api"]
 	path = proto/envoy-api
 	url = https://github.com/envoyproxy/data-plane-api.git
@@ -13,3 +10,9 @@
 [submodule "proto/opencensus"]
 	path = proto/opencensus
 	url = https://github.com/census-instrumentation/opencensus-proto.git
+[submodule "proto/xds"]
+	path = proto/xds
+	url = https://github.com/cncf/xds.git
+[submodule "proto/opentelemetry"]
+	path = proto/opentelemetry
+	url = https://github.com/open-telemetry/opentelemetry-proto.git
