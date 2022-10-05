@@ -5,16 +5,16 @@
     <RootNamespace>Envoy</RootNamespace>
     <Authors>Warren Falk</Authors>
     <Description>This library contains already-generated .NET gRPC and Protocol Buffer classes from Envoy's xDS protocol buffer files</Description>
-    <PackageProjectUrl>https://github.com/warrenfalk/envoy-grpc-dotnet</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/warrenfalk/envoy-grpc-dotnet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/AlexBagnolini/envoy-grpc-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AlexBagnolini/envoy-grpc-dotnet</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>2020 Warren Falk</Copyright>
     <PackageIcon>logo.png</PackageIcon>
     <Product>Envoy.Grpc</Product>
     <PackageId>Envoy.Grpc</PackageId>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
@@ -61,11 +61,55 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Remove="proto\googleapis\google\actions\**" />
+    <Protobuf Remove="proto\googleapis\google\ads\**" />
+    <Protobuf Remove="proto\googleapis\google\analytics\**" />
+    <Protobuf Remove="proto\googleapis\google\appengine\**" />
+    <Protobuf Remove="proto\googleapis\google\apps\**" />
+    <Protobuf Remove="proto\googleapis\google\area120\**" />
+    <Protobuf Remove="proto\googleapis\google\assistant\**" />
+    <Protobuf Remove="proto\googleapis\google\bigtable\**" />
+    <Protobuf Remove="proto\googleapis\google\bytestream\**" />
+    <Protobuf Remove="proto\googleapis\google\chat\**" />
+    <Protobuf Remove="proto\googleapis\google\chromeos\**" />
+    <Protobuf Remove="proto\googleapis\google\cloud\**" />
+    <Protobuf Remove="proto\googleapis\google\container\**" />
+    <Protobuf Remove="proto\googleapis\google\dataflow\**" />
+    <Protobuf Remove="proto\googleapis\google\datastore\**" />
+    <Protobuf Remove="proto\googleapis\google\devtools\**" />
+    <Protobuf Remove="proto\googleapis\google\example\**" />
+    <Protobuf Remove="proto\googleapis\google\firebase\**" />
+    <Protobuf Remove="proto\googleapis\google\firestore\**" />
+    <Protobuf Remove="proto\googleapis\google\genomics\**" />
+    <Protobuf Remove="proto\googleapis\google\geo\**" />
+    <Protobuf Remove="proto\googleapis\google\home\**" />
+    <Protobuf Remove="proto\googleapis\google\iam\**" />
+    <Protobuf Remove="proto\googleapis\google\identity\**" />
+    <Protobuf Remove="proto\googleapis\google\maps\**" />
+    <Protobuf Remove="proto\googleapis\google\monitoring\**" />
+    <Protobuf Remove="proto\googleapis\google\networking\**" />
+    <Protobuf Remove="proto\googleapis\google\partner\**" />
+    <Protobuf Remove="proto\googleapis\google\privacy\**" />
+    <Protobuf Remove="proto\googleapis\google\pubsub\**" />
+    <Protobuf Remove="proto\googleapis\google\search\**" />
+    <Protobuf Remove="proto\googleapis\google\spanner\**" />
+    <Protobuf Remove="proto\googleapis\google\storagetransfer\**" />
+    <Protobuf Remove="proto\googleapis\google\storage\**" />
+    <Protobuf Remove="proto\googleapis\google\streetview\**" />
+    <Protobuf Remove="proto\googleapis\google\type\**" />
+    <Protobuf Remove="proto\googleapis\google\watcher\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.7" />
     <PackageReference Include="Grpc" Version="2.46.5" />
     <PackageReference Include="Grpc.Tools" Version="2.49.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="proto\googleapis\google\" />
   </ItemGroup>
 </Project>
